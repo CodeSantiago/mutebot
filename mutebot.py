@@ -20,7 +20,7 @@ async def on_ready():
     scheduler = AsyncIOScheduler()
     
     # Define la hora en que quieres que te mutee (ej: 23:00 todos los días)
-    scheduler.add_job(mute_user, 'cron', hour=7, minute=10)
+    scheduler.add_job(mute_user, 'cron', hour=2, minute=1)
     scheduler.start()
 
 async def mute_user():
