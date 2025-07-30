@@ -2,6 +2,7 @@ import discord
 from discord.ext import commands
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
 import datetime
+import os
 
 intents = discord.Intents.default()
 intents.voice_states = True
@@ -29,4 +30,4 @@ async def mute_user():
         await member.edit(mute=True)
         print(f"{member.display_name} ha sido muteado.")
 
-bot.run('DISCORD_TOKEN')
+bot.run(os.getenv("DISCORD_TOKEN"))
